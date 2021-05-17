@@ -14,10 +14,9 @@ public class Converter {
 					+ "3. US Gallons to Imperial Gallons\r\n"
 					+ "4. Quit\r\n");
 			
-			int line = scanner.nextInt();
-			menuSelection = line;
+			menuSelection = scanner.nextInt();
 			
-			System.out.println("You have selected option: " + line);
+			System.out.println("You have selected option: " + menuSelection);
 			
 			switch (menuSelection) {
 		    case 1:
@@ -41,8 +40,11 @@ public class Converter {
 				double usGallonsToImperialGallons = usGallons * 0.832674;
 				System.out.println(usGallons + " US Gallons equals " + usGallonsToImperialGallons + " Imperial Gallons\r\n");
 		    	break;
-		    default:
+		    case 4:
 				System.out.println("Quiting Program\r\n");
+				break;
+			default:
+				System.out.println("This is not a menu option\r\n");
 				break;
 			}
 		}
